@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests1.CMD
 {
@@ -12,6 +8,12 @@ namespace Tests1.CMD
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Hello World!");
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+        public static void SayGoodBye()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Goodbye!");
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
