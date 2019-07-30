@@ -10,6 +10,6 @@ namespace Interface
     {
         IPerson Person { get; set; }
         double avgBall { get; set; }
-        void addBall(double avgBall);
+        void AddBall(double avgBall);
     }
 }

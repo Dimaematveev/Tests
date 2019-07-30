@@ -12,7 +12,7 @@ namespace Classes
         public IPerson Person { get; set; }
         public double avgBall { get; set; }
 
-        public void addBall(double avgBall)
+        public void AddBall(double avgBall)
         {
             this.avgBall = avgBall;
         }

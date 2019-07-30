@@ -25,5 +25,19 @@ namespace Tests
             // Assert:
             Assert.AreEqual(15, fakePerson.Age);
         }
+        [TestMethod]
+        public void TestAddBall()
+        {
+            // Arrange:
+
+            // Create the fake stockFeed:
+            var fakePerson = A.Fake<IPerson>();
+            IStudent student = new Student();
+            // Act:
+            A.CallTo(() => fakePerson.Age).Returns(15);
+            // Assert:
+            Assert.AreEqual(15, fakePerson.Age);
+        }
     }
+}
 }
