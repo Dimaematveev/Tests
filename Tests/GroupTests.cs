@@ -17,15 +17,16 @@ namespace Tests
         public void TestContosoStockPrice()
         {
             // Arrange:
+            Random rnd = new Random();
             List<IStudent> students = new List<IStudent>();
             for (int i = 0; i < 15; i++)
             {
-                var fakePerson = A.Fake<IPerson>();
-                A.CallTo(() => fakePerson.Age).Returns(15);
-                A.CallTo(() => fakePerson.Name).Returns("Val");
+               // var fakePerson = A.Fake<IPerson>();
+                //A.CallTo(() => fakePerson.Age).Returns(rnd.Next(17,27));
+               // A.CallTo(() => fakePerson.Name).Returns(Guid.NewGuid().ToString().Substring(0,7));
                 var fakeStudent = A.Fake<IStudent>();
-                A.CallTo(() => fakeStudent.Person).Returns(fakePerson);
-                A.CallTo(() => fakeStudent.avgBall).Returns(3.5d);
+                //A.CallTo(() => fakeStudent.Person).Returns(fakePerson);
+               // A.CallTo(() => fakeStudent.avgBall).Returns(rnd.Next(20, 50) / 10d);
                 students.Add(fakeStudent);
             }
             // Create the fake stockFeed:
