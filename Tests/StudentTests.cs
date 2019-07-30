@@ -35,9 +35,13 @@ namespace Tests
             IStudent student = new Student();
             // Act:
             A.CallTo(() => fakePerson.Age).Returns(15);
+            A.CallTo(() => fakePerson.Name).Returns("Dima");
+            student.Person=fakePerson;
+            student.AddBall(3.5);
             // Assert:
-            Assert.AreEqual(15, fakePerson.Age);
+            Assert.AreEqual(3.5d, student.avgBall);
+            Assert.AreEqual(fakePerson, student.Person);
         }
     }
 }
-}
+
