@@ -11,9 +11,10 @@ namespace UnitTestDateTime
         [TestMethod]
         public void AgeTest()
         {
-            Ages age = new Ages(new DateTime(2000, 8, 8));
-            A.Fake<IDateTimeProvider>(()=> Now)
-            Assert.AreEqual(19, age.age);
+            Ages age = new Ages(new DateTime(2000, 1, 1));
+            var dat = A.Fake<DateTimeProvider>();
+            A.CallTo(() => DateTimeProvider.Now).Returns(new DateTime(2001, 1, 1));
+            Assert.AreEqual(1, age.age);
         }
     }
 }

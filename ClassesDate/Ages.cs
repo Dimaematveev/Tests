@@ -18,9 +18,8 @@ namespace ClassesDate
         public int age {
             get
             {
-                var DT = new DateTimeProvider();
-                int ret = DT.Now.Year - bithday.Year;
-                if (new DateTime(DT.Now.Year, bithday.Month, bithday.Day) > DT.Now)
+                int ret = DateTimeProvider.Now.Year - bithday.Year;
+                if (new DateTime(DateTimeProvider.Now.Year, bithday.Month, bithday.Day) > DateTimeProvider.Now)
                 {
                     ret--;
                 }

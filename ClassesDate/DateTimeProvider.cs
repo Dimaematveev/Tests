@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ClassesDate
 {
-    public class DateTimeProvider : IDateTimeProvider
+    public class DateTimeProvider
     {
-        public DateTime Now => DateTime.Now;
+        public static DateTime Now => DateTime.Now;
     }
 }
