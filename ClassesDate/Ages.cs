@@ -9,17 +9,22 @@ namespace ClassesDate
     public class Ages
     {
         DateTime bithday;
-
+        DateTimeProvider DT;
         public Ages(DateTime bithday)
         {
             this.bithday = bithday;
+            SetDT();
+        }
+        public void SetDT()
+        {
+            DT = new DateTimeProvider();
         }
 
         public int age {
             get
             {
-                int ret = DateTimeProvider.Now.Year - bithday.Year;
-                if (new DateTime(DateTimeProvider.Now.Year, bithday.Month, bithday.Day) > DateTimeProvider.Now)
+                int ret = DT.Now.Year - bithday.Year;
+                if (new DateTime(DT.Now.Year, bithday.Month, bithday.Day) > DT.Now)
                 {
                     ret--;
                 }
